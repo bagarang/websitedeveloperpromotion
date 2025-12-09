@@ -1,0 +1,28 @@
+/* --- GLOBAL VARIABLES --- */
+:root {
+    --bg-dark: #0f172a;       /* Latar Belakang Gelap */
+    --text-main: #ffffff;     /* Teks Putih */
+    --text-muted: #94a3b8;    /* Teks Abu-abu */
+    --accent-blue: #0055ff;   /* Biru sesuai referensi gambar */
+    --container-width: 1300px;
+}
+
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}

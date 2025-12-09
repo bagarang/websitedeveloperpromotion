@@ -1,0 +1,517 @@
+/* --- 1. NAVBAR --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 25px 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--text-main);
+}
+
+/* --- 2. HERO MAGAZINE GRID (HOME) --- */
+#hero-magazine {
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 0.8fr;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-left {
+    z-index: 10;
+}
+
+.divider-line {
+    width: 60px;
+    height: 5px;
+    background-color: var(--text-main);
+    margin-bottom: 30px;
+}
+
+.hero-left h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-left p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 450px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.big-arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 85, 255, 0.4);
+}
+
+.big-arrow-btn:hover {
+    transform: scale(1.1) rotate(45deg);
+}
+
+.hero-center {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.image-wrapper img {
+    max-height: 85vh;
+    width: auto;
+    object-fit: contain;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    padding-left: 40px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    height: 60%;
+}
+
+.info-block h4 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.info-block p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.text-link {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 3px;
+}
+
+.social-icons a {
+    color: var(--text-muted);
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-icons a:hover {
+    color: var(--accent-blue);
+}
+
+/* --- 3. ABOUT PAGE STYLE --- */
+#about-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.divider-line-white {
+    width: 80px;
+    height: 4px;
+    background-color: var(--text-main);
+    margin-bottom: 30px;
+}
+
+.about-left h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.about-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 90%;
+}
+
+.stats-row {
+    display: flex;
+    gap: 60px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.about-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    z-index: -1;
+}
+
+.profile-photo {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    filter: grayscale(20%);
+    transition: 0.3s ease;
+}
+
+.profile-photo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* --- 4. PORTFOLIO PAGE STYLE --- */
+#portfolio-section {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+.portfolio-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+}
+
+.divider-center {
+    width: 60px;
+    height: 4px;
+    background-color: var(--text-main);
+    margin: 0 auto 20px auto;
+}
+
+.portfolio-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.portfolio-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.portfolio-card {
+    background-color: #1e293b;
+    border-radius: 24px;
+    padding: 40px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-top {
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.portfolio-card h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.card-image {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    margin-top: auto;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* --- 5. CONTACT PAGE STYLE (NEW) --- */
+#contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; /* Offset Navbar */
+}
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px; /* Jarak antar elemen */
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Kolom Kiri: Logo */
+.contact-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Logo nempel ke garis */
+}
+
+.contact-left img {
+    max-width: 300px; /* Ukuran Logo Besar */
+    width: 100%;
+    height: auto;
+}
+
+/* Garis Pemisah Vertikal */
+.contact-divider {
+    width: 2px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Kolom Kanan: Info */
+.contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-right h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-right p {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #1e293b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.contact-item:hover .icon-box {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px rgba(0, 85, 255, 0.4);
+}
+
+.icon-box svg {
+    color: white;
+}
+
+/* --- RESPONSIVE GLOBAL --- */
+@media (max-width: 1024px) {
+    /* Home */
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; padding-top: 100px; height: auto; }
+    .hero-left { order: 1; padding: 0 20px; }
+    .hero-center { order: 2; height: 50vh; }
+    .hero-right { order: 3; border-left: none; padding: 40px 20px; text-align: left; }
+    
+    /* About */
+    .about-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .about-right { order: -1; }
+
+    /* Portfolio */
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-card { min-height: auto; }
+
+    /* Contact Responsive */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .contact-left { justify-content: center; }
+    .contact-left img { max-width: 200px; }
+    
+    .contact-divider {
+        width: 100px;
+        height: 2px; /* Jadi horizontal di HP */
+    }
+
+    .contact-right { align-items: center; }
+    .contact-item { justify-content: center; }
+    .contact-item:hover { transform: translateY(-5px); }
+}
